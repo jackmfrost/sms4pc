@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact {
+    border-bottom: 1px solid black;
+}
+
+.addcontact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact:hover {
+    cursor: pointer;
+}
+
+p {
+    margin-left: 1rem;
+}

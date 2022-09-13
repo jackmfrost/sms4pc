@@ -1,0 +1,23 @@
+header {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+.contacts {    
+    height: 47.5rem;
+    border-right: 1px solid;
+    overflow-y: scroll;
+}
+
+.contacts::-webkit-scrollbar {    
+    display: none;
+}
+
+.contactList {
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
