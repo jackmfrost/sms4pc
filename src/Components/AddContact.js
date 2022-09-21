@@ -40,7 +40,10 @@ export function AddContact() {
 
     function handleClick() {
         let val = {
-            [name]: number
+            [name]: {
+                number: number,
+                lastMessageSent: null
+            }
         }
 
         //If validityCheck returns true, continue; if not, exit function
@@ -57,7 +60,10 @@ export function AddContact() {
                 let tacts = JSON.parse(contacts);
 
                 //Creates new JSON element in contacts; key=name, val=number
-                tacts[name] = number;
+                tacts[name] = {
+                    number: number,
+                    lastMessageSent: null
+                };
                 
                 //Replaces the current contact item with tacts
                 localStorage.setItem("contacts", JSON.stringify(tacts));

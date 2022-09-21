@@ -4,7 +4,7 @@ import './Stylesheets/sendbutton.css';
 
 function getData() {
 
-    //Pull from their sessionStorage targets, even if they dont exist yet
+    //Pull from their sessionStorage targets, can be null
     let phone = sessionStorage.getItem("activeNumber");
     let message = sessionStorage.getItem("message");
 
@@ -31,7 +31,11 @@ function getData() {
             }).then(data => {
             console.log(data);
         });
-        
+
+        //TODO Don't let this exceed some amount of chars
+        let newContacts = JSON.parse(localStorage.getItem("contacts"));
+        newContacts[sessionStorage.getItem("activeName")]["lastMessageSent"] = message;
+        localStorage.setItem("contacts", JSON.stringify(newContacts));
     }
     else {
         console.log("API call failed");

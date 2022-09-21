@@ -24,7 +24,7 @@ export function ToFro() {
     return (
         <div id="ToFro">
             <div>
-                <h2>To: {To}</h2>
+                <h2>To: {To[0]}{To[1]}{To[2]}-{To[3]}{To[4]}{To[5]}-{To[6]}{To[7]}{To[8]}{To[9]}</h2>
             </div>
             <div>
                 <h2>From: <InputBox value= { From } onChange={ handleChange }/></h2>

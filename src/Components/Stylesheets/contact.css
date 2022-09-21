@@ -21,3 +21,12 @@ button {
 p {
     margin-left: 1rem;
 }
+
+#lms {
+    font-size: 10pt;
+}
+
+#name {
+    font-size: 15pt;
+    margin-bottom: .25rem;
+}
