@@ -30,5 +30,4 @@ export function ListContacts() {
             <Contact name= {contactname} title= {JSON.parse(localStorage.getItem('contacts'))[contactname]}/>)
         );
     }
-
 }

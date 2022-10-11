@@ -1,4 +1,9 @@
 #ToFro {
     text-align: center;
-    margin-top: 40%;
+    display: flex;
+}
+
+#to {
+    margin-left: 4rem;
+    padding-right: 10rem;
 }

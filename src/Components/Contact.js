@@ -3,7 +3,13 @@ import './Stylesheets/contact.css'
 
 export function Contact(prop) {
 
-    let lastMessage = JSON.parse(localStorage.getItem("contacts"))[prop.name]["lastMessageSent"];
+    let lastMessage;
+
+    if (JSON.parse(localStorage.getItem("contacts"))[prop.name]["log"] != null) {
+        let messages = JSON.parse(localStorage.getItem("contacts"))[prop.name]["log"];
+        let length = messages.length;
+        lastMessage = messages[length - 1];
+    }
 
     const [lms, setLms] = useState(lastMessage);
 
@@ -26,10 +32,22 @@ export function Contact(prop) {
         sessionStorage.setItem("activeName", prop.name);
     }
 
-    return(
-        <div className="contact" title= {JSON.parse(localStorage.getItem('contacts'))[prop.name]}>
-            <p onClick={handleEvent} id="name">{prop.name}</p>
-            <p id="lms">Last sent: {lms}</p>
-        </div>
-    );
+    if (lms.length <= 26) {
+        return(
+            <div className="contact" title= {JSON.parse(localStorage.getItem('contacts'))[prop.name]}>
+                <p onClick={handleEvent} id="name">{prop.name}</p>
+                <p id="lms">Last sent: {lms}</p>
+            </div>
+        );
+    }
+    else {
+        return(
+            <div className="contact" title= {JSON.parse(localStorage.getItem('contacts'))[prop.name]}>
+                <p onClick={handleEvent} id="name">{prop.name}</p>
+                <p id="lms">Last sent: {lms.substring(0, 26)}...</p>
+            </div>
+            
+        );
+    }
+
 }

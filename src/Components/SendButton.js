@@ -30,12 +30,17 @@ function getData() {
             return response.json();
             }).then(data => {
             console.log(data);
+            if (data.success) {
+                let newContacts = JSON.parse(localStorage.getItem("contacts"));
+                    if (newContacts[sessionStorage.getItem("activeName")]["log"] == null) {
+                        newContacts[sessionStorage.getItem("activeName")]["log"] = [message];
+                    }
+                    else {
+                        newContacts[sessionStorage.getItem("activeName")]["log"].push(message);
+                    }
+                    localStorage.setItem("contacts", JSON.stringify(newContacts));
+            }
         });
-
-        //TODO Don't let this exceed some amount of chars
-        let newContacts = JSON.parse(localStorage.getItem("contacts"));
-        newContacts[sessionStorage.getItem("activeName")]["lastMessageSent"] = message;
-        localStorage.setItem("contacts", JSON.stringify(newContacts));
     }
     else {
         console.log("API call failed");

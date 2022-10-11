@@ -42,7 +42,7 @@ export function AddContact() {
         let val = {
             [name]: {
                 number: number,
-                lastMessageSent: null
+                log: null
             }
         }
 
@@ -62,7 +62,7 @@ export function AddContact() {
                 //Creates new JSON element in contacts; key=name, val=number
                 tacts[name] = {
                     number: number,
-                    lastMessageSent: null
+                    log: null
                 };
                 
                 //Replaces the current contact item with tacts
