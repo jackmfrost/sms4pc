@@ -5,17 +5,13 @@ button {
 }
 
 .contact {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 
 .addcontact {
     text-align: center;
     display: flex;
     flex-direction: column;
-}
-
-.contact:hover {
-    cursor: pointer;
 }
 
 p {
@@ -30,3 +26,49 @@ p {
     font-size: 15pt;
     margin-bottom: .25rem;
 }
+
+#name:hover {
+    cursor: pointer;
+    background-color:white;
+    color: black;
+}
+
+#selectedName {
+    background-color:white;
+    color: black;
+    font-size: 15pt;
+    margin-bottom: .25rem;
+}
+
+#selectedName:hover {
+    cursor: pointer;
+    background-color:transparent;
+    color: white;
+}
+
+#namespan {
+    display: inline-block;
+}
+
+#deletespan {
+    float: right;
+}
+
+#delete:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+#delete {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    margin-right: 1rem;
+    padding: .10rem;
+    font-size: 10pt;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+

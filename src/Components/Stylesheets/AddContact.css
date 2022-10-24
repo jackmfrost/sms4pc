@@ -1,0 +1,49 @@
+#popup {
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
+        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
+        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 3px, transparent 3px) 100% 100%/8px 8px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 10px) calc(100% - 16px) no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 16px) calc(100% - 10px) no-repeat,
+        linear-gradient(rgba(150,150,150,100) 0%, rgba(255,255,255,100) 50%, rgba(150,150,150,100) 100%);
+    border-radius: 8px;
+    padding: 9px;
+    box-sizing: border-box;
+    height: 10rem;
+    width: 25rem;
+    position: fixed;
+    left: 45%;
+    top: 35%;
+}
+
+#head p {
+    text-align: center;
+    padding-top: 3px;
+    margin-top: 0;
+    color: black;
+}
+
+#inputs {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#inputs input {
+    width: 18rem;
+    margin-left: 1rem;
+    align-self: flex-start;
+}
+
+#inputs button {
+    align-self: flex-end;
+    border: 0;
+    background-color: transparent;
+    font-size: 10pt;
+
+}
+
+#inputs button:hover {
+    cursor: pointer;
+}

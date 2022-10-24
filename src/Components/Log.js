@@ -4,10 +4,10 @@ import './Stylesheets/logs.css'
 export function Log() {
 
     function getLog() {
-        if (sessionStorage.getItem("activeName")) {
+        if (sessionStorage.getItem("activeName") != null) {
             return (JSON.parse(localStorage.getItem("contacts"))[sessionStorage.getItem("activeName")]["log"]);
         }
-        return (["No Active Contact"]);
+        return (null);
     }
 
     const [logs, setLogs] = useState(getLog);
@@ -18,7 +18,7 @@ export function Log() {
             if (logs != getLog) {
                 setLogs(getLog);
             }
-        }, 1000);
+        }, 1);
 
     if (logs != null) {
         return (
@@ -26,6 +26,6 @@ export function Log() {
             logs.map((message) => <p id="log">{message}</p>)
         );
     } else {
-        return (<p>No Active Contact </p>);
+        return (<p>No Messages Sent</p>);
     }
 }

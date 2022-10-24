@@ -21,3 +21,18 @@ header {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
 }
+
+hr {
+    margin: 0;
+}
+
+#newContact {
+    text-align: center;
+    margin-right: .55rem;
+}
+
+#newContact:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}

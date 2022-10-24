@@ -8,7 +8,8 @@ body {
     overflow-y: hidden;
     margin-left: 0;
     padding-left: 0;
-    
+    background-color: rgb(23, 23, 23);
+    color: white;
 }
 
 #root {
@@ -31,7 +32,13 @@ footer {
     width: 100%;
 }
 
-#log {
-    margin-left: 4rem;
-    margin-right: 4rem;
+#logs {
+    overflow-y: scroll;
+    height: 37rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#logs::-webkit-scrollbar {
+    display: none;
 }

@@ -11,22 +11,12 @@ function getContacts() {
 }
 
 export function ListContacts() {
+    let contacts = getContacts();
 
-    //String that getContacts returned
-    const [Contacts, setContacts] = useState(getContacts);
-
-    //Every second, refresh list. There has to be a better way :,(
-    setInterval(() => {
-        //If contacts was updated, change it in storage
-        if (Contacts != getContacts) {
-            setContacts(getContacts);
-        }
-    }, 1000);
-
-    if (Contacts != null) {
+    if (contacts != null) {
         return (
             //Maps the array
-            Contacts.map((contactname) =>
+            contacts.map((contactname) =>
             <Contact name= {contactname} title= {JSON.parse(localStorage.getItem('contacts'))[contactname]}/>)
         );
     }

@@ -12,14 +12,12 @@ function createWindow() {
         height: 800,
         resizable: false,
         webPreferences: {
-            nodeIntegration: true,
             enableRemoteModule: true
         }
     });
-    
-    win.setMenu(null);
-    win.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
 
+    win.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/indev.html')}`);
+    // win.setMenu(null);
 }
 
 app.on('ready', createWindow);
